@@ -46,3 +46,10 @@
 	let flat = [1,2,3,[4,5,[8,9]],6];
 	const flaTed = flat.flat(2);
 	console.log(flaTed);
+
+	// Higher order function is a function that helps to operate to the another functions.
+	// for Each methods is used to loop through from the value of the every index of the of the arrays; 
+	let eachNumber = [1,2,3,4,5];
+	eachNumber.forEach((n)=>{
+	console.log(n);
+	})
