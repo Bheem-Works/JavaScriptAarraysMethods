@@ -1,4 +1,4 @@
-	
+
 
 	// This is the toString() Methods of the arrays;
 	// toString methods is used for to conver an array object to the 
@@ -61,5 +61,23 @@
 
 	// reduce : Reduce methods is use to calculate the number with the accumlator
 	let digitNumber = [1,2,3];
-	let digitTotal = digitNumber.reduce((total,currentVal) => total + currentVal);
+	let digitTotal = digitNumber.reduce((total,currentVal) => total + currentVal); // we can also set the intial value by using the ,0 > value; 
 	console.log(digitTotal);
+
+	// Math.Max by using the reduce Methods 
+	let digitMax = [1,2,4,5];
+	let digitMaxTotal = digitMax.reduce((a,b) => Math.max(a,b), -Infinity);
+	console.log(digitMaxTotal);
+
+	// Find the max number by using the loops no shortcuts. 
+	// Store the numbers and the values
+	let store = [1,2,3,4,5];
+	let assumeMax = store[0];
+
+	for(let i = 0; i < store.length; i++) {
+	if(store[i] > assumeMax) {
+	assumeMax = store[i];
+	}
+	}
+
+	console.log(assumeMax);
