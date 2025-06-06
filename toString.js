@@ -53,3 +53,13 @@
 	eachNumber.forEach((n)=>{
 	console.log(n);
 	})
+
+	// Mapping : map is the methods to get the value from the arrays and change the whole vlaue. 
+	let mapNum = [1,2,3];
+	let mapSum = mapNum.map((n)=> n + 1);
+	console.log(mapSum);
+
+	// reduce : Reduce methods is use to calculate the number with the accumlator
+	let digitNumber = [1,2,3];
+	let digitTotal = digitNumber.reduce((total,currentVal) => total + currentVal);
+	console.log(digitTotal);
