@@ -34,3 +34,15 @@
 	const sliceName = ['vim','man','turu'];
 	const changeSlice = sliceName.slice(1,3);
 	console.log(changeSlice);
+
+
+	// index of : to find the index of the arrays.
+	let indexArr = ['chasma','bolna','mildaina'];
+	const indexFind = indexArr.lastIndexOf('chasma');
+	console.log(indexFind);
+
+	// flat : flat method is used int the js to get the value of the nested arrays;
+	// fun fact : (this is the new thing's that i learned in this - hahahah)
+	let flat = [1,2,3,[4,5,[8,9]],6];
+	const flaTed = flat.flat(2);
+	console.log(flaTed);
