@@ -71,13 +71,32 @@
 
 	// Find the max number by using the loops no shortcuts. 
 	// Store the numbers and the values
-	let store = [1,2,3,4,5];
-	let assumeMax = store[0];
+	let store = [1,2,3,4,5]; 
+	let assumeMax = store[0]; // taking the first index to compare with the big number at the start and later change it; 
 
 	for(let i = 0; i < store.length; i++) {
-	if(store[i] > assumeMax) {
-	assumeMax = store[i];
+	if(store[i] > assumeMax) { // comparing the store value to the assumeMax.
+	assumeMax = store[i]; // the value change each time so, we will assing value and  when it's change then compare with the big numbers again. 
 	}
 	}
 
-	console.log(assumeMax);
+	console.log(assumeMax); // output should be the 5; 
+
+	// some > it is used to find the some of the numbers and match it to the conditions; looks for single match if it is match then return true;
+	let someArr = [1,2,3,4,5,6];
+	let findSome = someArr.some((n)=> n > 5);
+	console.log(findSome);
+
+	// every > it is used to loop through from the every match of the arrays if it is not valid or equal then return the false;
+	let everyArr = [1,2,3,4,5];
+	let findEveryArr = everyArr.every((n) => n % 2 === 0);
+	console.log(findEveryArr);
+
+	// find > find is used to find the value between of the arrays;
+	let findMan = [
+	{name:'vim',quality:10},
+	{name :'bhim',quality:100},
+	]
+	let find = findMan.find((s) => s.name === 'vim');
+	console.log(find);
+	
