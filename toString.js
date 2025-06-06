@@ -18,4 +18,14 @@
 	let copyCatOne = ['rone','prone','prob'];
 	let copyCatTwo = ['jesicca','miro','shifini'];
 	const concat = copyCat.concat(copyCatOne,copyCatTwo);
-	console.log(concat);	
+	console.log(concat);
+
+	// join 
+	const bora  = ['bhim','miso'];
+	console.log(bora.join('and'));
+
+	// splice : splice is used to extrac the value from the arrays. !Note it : splice change the original value of the arrays;
+	const spliceName = ['john','danel','savin'];
+	const copyName = [...spliceName] // copying the name by using the spread operator...;
+	copyName.slice(1,1);
+	console.log(copyName);
