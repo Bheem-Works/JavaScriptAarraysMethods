@@ -29,3 +29,8 @@
 	const copyName = [...spliceName] // copying the name by using the spread operator...;
 	copyName.slice(1,1);
 	console.log(copyName);
+
+	// slice : slice is used to extract the value from the arrays it doesn;t change the actuall value or the objects.
+	const sliceName = ['vim','man','turu'];
+	const changeSlice = sliceName.slice(1,3);
+	console.log(changeSlice);
