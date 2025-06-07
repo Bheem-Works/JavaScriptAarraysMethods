@@ -125,5 +125,64 @@
 
 	// isArray : isArray methods is used for check that the objects or the value is arrays or not? if it is then true or false; 
 	let isaArray = [1,2,3,4];
-	let validArray = Array.isArray(isaArray);
+	let validArray = Array.isArray(isaArray); // checking if it is array or not.
 	console.log(validArray);
+
+	// copyWithin : copWithin methods is used for copy the value from and arrays it doesn't change the arays value it just copy
+	// (targetValue)
+	// (tartgetValue,startIndex);
+	// (targetValue,startIndex,endIndex);
+	let noneCopy = ['banana','orange','pinapple'];
+	let copied = noneCopy.copyWithin(0,1);
+	console.log(copied);
+	
+	// copyin the value or swappig inisde to the elements;
+	let number = [1,2,3,4,5,6];
+	let copiedNumber = number.copyWithin(0,2,4);
+	console.log(copiedNumber);
+
+	// reverse : reverse methods is used for reverse the value of the arrays;
+	let reverseNum = [1,2,3,4];
+	console.log(reverseNum.reverse());
+	
+	// value of : value of returns the primitive value of an objects like a string boolean,numbers and other's data types;
+	let strValueOf = new String('vim');
+	console.log(strValueOf);
+	console.log(strValueOf.valueOf());
+
+	// Entries : entries doesn't take any parameter.Return a new arrays irritates the objects.
+	const foodEntires = ['apple','juice','mango'];
+	const foodNameEntries = foodEntires.entries();
+	for(let foodData of foodEntires){
+	console.log(foodData);
+	}
+
+	// keys : keys methods are also same like a entries it also loop through and irritates the objects but give the key index value.
+	let key = ['house','bike','car','helicopter'];
+	let keyMethods = key.keys();
+	for(let keysStore of keyMethods) {
+		console.log(keysStore);
+	}
+	
+	// values : values methods is used to give the directs value of an objects or an arrays;
+	let weather = ['hot','cold','medium'];
+	const valueWeather = weather.values();
+	console.log(...valueWeather);
+
+	// reduce left and the reduce right. it is the same as the reduce but it reduce from the right or the left
+	let numReduceRight = [1,2,3,4,5];
+	let reducingRight = numReduceRight.reduce((a,b) => a + b);
+	console.log(reducingRight);
+
+	// flat map : flat is used to remove the nested arrays. by using the flat map methods we don't have to used the flat after the map; 
+	// for examples :
+	const flating = [[1,2,],[3,4]];
+	const flatMapping = flating.flatMap((array)=>{
+	return [array[0] + array[1]];	
+	})
+	console.log(flatMapping);
+
+	// nested falted examples;
+	let flatArr = [1,2,3];
+	let arrFlat = flatArr.flatMap(x => [[x * 2]]);
+	console.log(arrFlat);
