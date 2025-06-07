@@ -186,3 +186,8 @@
 	let flatArr = [1,2,3];
 	let arrFlat = flatArr.flatMap(x => [[x * 2]]);
 	console.log(arrFlat);
+
+	// at() methods In arrays : at methods is the relativing index like a arrray.length;
+	let everest = ['mountFuji','mountKali','mountReti'];
+	const atEverest = everest.at(-1);
+	console.log(atEverest);
