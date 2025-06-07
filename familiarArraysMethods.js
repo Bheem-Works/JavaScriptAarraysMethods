@@ -1,5 +1,4 @@
 
-
 	// This is the toString() Methods of the arrays;
 	// toString methods is used for to conver an array object to the 
 
@@ -99,4 +98,17 @@
 	]
 	let find = findMan.find((s) => s.name === 'vim');
 	console.log(find);
+
+	// fill Methods : fills methods is used for fill the value inside of the arrays;
+	let fillArrays = [1,2,3,4,5];
+	fillArrays.fill('vim');
+	console.log(fillArrays);
+	
+	// increasing number from the fill methods;
+	function findNumber(n){
+	return Array(n)
+		.fill(0)
+		.map((_,idx)=>idx + 1)
+	}
+	console.log(findNumber(11));
 	
