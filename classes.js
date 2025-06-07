@@ -36,7 +36,7 @@
 			return this.height * this.width
 		}
 
-		*getSlides(){
+		*getSlides(){ // functions generators; 
 	 	yield this.height;
 		yield this.width;
 		yield this.height;
