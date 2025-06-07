@@ -111,4 +111,19 @@
 		.map((_,idx)=>idx + 1)
 	}
 	console.log(findNumber(11));
-	
+ 	
+
+	// Arrays from is a methods which is used to convert the object or the value to the an arrays objects;
+	const str = '1,2,3,3,4,5,6,7';
+	const strArr = Array.from(str,Number); // converting to the array first and after that converting them to Numbers;
+	console.log(strArr);
+
+	// Set Methods : Set methods is used for remove the duplicate by default; 
+	const duplicateValue = [1,2,3,4,1,2,3,];
+	const removeDuplicate = Array.from(new Set(duplicateValue));
+	console.log(removeDuplicate);
+
+	// isArray : isArray methods is used for check that the objects or the value is arrays or not? if it is then true or false; 
+	let isaArray = [1,2,3,4];
+	let validArray = Array.isArray(isaArray);
+	console.log(validArray);
