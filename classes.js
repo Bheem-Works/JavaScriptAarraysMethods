@@ -69,37 +69,84 @@
 		this.height = height;
 		this.width = width;
 	}
-
+	}
 
 	// Private Properties : it is not seen from the outside. it must be written and readen inside the class fields;
 	
 
 	// Inheritance;
 	// Inhertiance means one class can reuse the properties and methods from the other's classes.
-	
+	// Exntends : Extends le chai ek class bata arko class ma inherit acess grna dincha (code reuse grna dincha). Parenst class
+	// ko methods ra funtions pani child class le acess grna dincha. 
+	// Super : super chai parent's class ko constructor call grna lai use garincha. 
 
 	// Simple examples in the javascript of the classes
-	class Vehicle {
+	class Sadhan {
 	    constructor(brand) {
 		this.brand = brand;
-    }
-
-    start() {
+    }	
+		start() {
         console.log(`this is a ${this.brand} is Startinggg....`);
 		    }
 		}
-
-	class Car extends Vehicle { // Corrected from 'vechie' to 'Vehicle'
+	
+	class Car extends Sadhan { // Corrected from 'vechie' to 'Sadhan'
 	    constructor(brand, model) {
 		super(brand);
 		this.model = model;
     }
 
     drive() {
-        console.log(`${this.brand} ${this.model} id driving...`);
+        console.log(`${this.model} And  id driving...`);
     }
 }
 
 	const myCar = new Car('honda', 'shine');
 	console.log(myCar.start());
 	console.log(myCar.drive());
+
+
+// Questions 1 : Write a person class with a greet() method that print greeting.
+// Then, Create a students classes that extends person and adds a study() Methods;
+
+	class person {
+		constructor (name){
+			this.name = name;
+		}
+		greet() {
+			console.log(`Hi i am ${this.name}`);
+		}
+	}
+
+	class Students extends person {
+		// constructor(name){
+		// 	super(name)
+		// } 
+		// !Note if you don't call the constructor again javascript atuomatically call the constructor for you and pass the value. 
+		// If you want to use the custom classes and value you have to use the class and the super methods. 
+	study () {
+		console.log(`${this.name} is studying...`)
+	}
+	}
+
+	const vim = new Students('vim');
+	vim.greet();
+	vim.study();
+
+
+	// Examples : make a animal class witht a makeSound methods. Then create a dog class that extends and animalsounds overWrite the wooff!
+	
+	class Animal{
+		makeSound(){
+			console.log('this is making sound..')
+		}
+	}
+
+	class Dog extends Animal { // Again same mistakes the invoked message come from the () don't use the () in the clasess
+		makeSound() {
+			console.log('Dog!')
+		}
+	}
+
+	const dog = new Dog();
+	dog.makeSound();
