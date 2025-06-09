@@ -75,6 +75,25 @@
 	}
 
 	sequence();
+
+	// Print numbers from 1 to 10 with delay of 1 second between each value being printed.
+	// solution of the AsyncFunction delay Problems 
+
+	function delay(ms){
+		return new Promise((resolve) => {
+		setTimeout(resolve,ms); // if it resolve pass the value and pass the seconds throught the ms.
+		},1000);
+	}
+
+	async function loopDelay () {
+		const currValue = 1; // starting value is going to be 1; 
+		const endValue = 10; // ending value is 10; coz we want the number between the 1 and 10;
+		for(let i = currValue; i < endValue+1; i++){
+		await delay(1000);
+		console.log(`${i} Dollar!`)
+		};
+	};
+
 	// 🛠️ try
 	//👉 try le risky code lai run garna try garcha.
 	//👉 Yedi try vitra ko code ma kune error aayo bhane, tesko control catch ma jump garcha.
