@@ -124,7 +124,7 @@
 		// } 
 		// !Note if you don't call the constructor again javascript atuomatically call the constructor for you and pass the value. 
 		// If you want to use the custom classes and value you have to use the class and the super methods. 
-	study () {
+	study () {ay
 		console.log(`${this.name} is studying...`)
 	}
 	}
