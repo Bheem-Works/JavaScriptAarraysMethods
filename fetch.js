@@ -40,3 +40,39 @@
 	//👉 finally le chai try ra catch vitra error ayo ya aayena — dono case ma run huncha.
 	//👉 Yo mostly cleanup ko lagi use huncha (e.g. closing connection, clearing timers).
 	//👉 Euta example: Suppose try vitra file open gareko cha, tyo close garna finally use garincha.
+
+
+	// Examples ones: 
+	
+	try{
+	try{
+	throw new Error("Yesh i have ac");
+	} catch (hot){
+		console.log(hot.message)
+	} finally {
+		console.log("Finally we have Ac");
+	}
+	} catch (hotErr) {
+		console.log(hotErr.message)
+	}
+
+
+	// Examples two with the anyomous functions; 
+	
+// Examples two with the anyomous functions;
+
+	(()=>{
+	try{
+	try{
+		throw new Error("I am at roof");
+	}
+		catch(roof){
+			console.log(roof.message);
+		}
+		finally{
+			console.log("finally i am at the roof");
+			}
+	} catch (err){
+		console.log(err.message)
+	}
+	})();
