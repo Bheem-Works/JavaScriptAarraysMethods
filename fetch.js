@@ -25,6 +25,22 @@
 	// Asyncs functions make's a function that always return the promises.
 	// Await helps to unpack and hold,pause the value until it resolve.
 
+	// Try it!
+	function resolveAfter2Seconds () {
+	return new Promise ((resolve)=>{
+	setTimeout(()=>{
+	resolve("resolve")
+	},2000)
+	})
+	} // it should return after the 2 seconds;
+
+	async function asyncCall(){
+	console.log('calling');
+	const result = await resolveAfter2Seconds(); // Calling the resolveAfter2Seconds function.
+	console.log(result);
+	}
+
+	asyncCall(); // Calling functions 
 
 	// 🛠️ try
 	//👉 try le risky code lai run garna try garcha.
@@ -59,9 +75,10 @@
 
 	// Examples two with the anyomous functions; 
 	
-// Examples two with the anyomous functions;
+	// Examples two with the anyomous functions;
 
-	(()=>{
+	/// Use the anyomouse function for the single calls and fast and protoype prupose.
+	(()=>{ // Immedaitely involked function 
 	try{
 	try{
 		throw new Error("I am at roof");
