@@ -42,6 +42,39 @@
 
 	asyncCall(); // Calling functions 
 
+	// Exercise of asyncs functions; 
+	function twoSecondDelay(){
+	console.log("the slow is starting")
+	return new Promise ((resolve)=>{
+	setTimeout(()=>{
+	resolve("slow");
+	console.log("this is done slow")
+	},2000)
+	})
+	}
+
+	function oneSecondDelay(){
+		console.log("this fast is starting");
+	return new Promise ((resolve)=>{
+	setTimeout(()=>{
+	resolve("fast");
+	console.log("the first is has been completed")
+	},1000)
+	})	
+	}
+
+
+	async function sequence (){
+	console.log("sequence Start");
+	const slow = await twoSecondDelay();
+	const fast = await oneSecondDelay();
+	console.log(slow);
+	console.log(fast);
+
+	console.log("sequence done");
+	}
+
+	sequence();
 	// 🛠️ try
 	//👉 try le risky code lai run garna try garcha.
 	//👉 Yedi try vitra ko code ma kune error aayo bhane, tesko control catch ma jump garcha.
