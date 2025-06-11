@@ -191,3 +191,16 @@
 	let everest = ['mountFuji','mountKali','mountReti'];
 	const atEverest = everest.at(-1);
 	console.log(atEverest);
+        
+        // .length is the property of the arrays; 
+        // the Difference between the property and the arrays is that : 
+        // Properties:
+        // A property is a value associated with an object or array. It describes a characteristic or data of the object.
+        // For arrays, .length is a property that indicates the number of elements in the array.
+        // Properties are accessed with a dot notation (e.g., array.length) and do not require parentheses.
+        // They can be read (and sometimes modified), but they don’t perform actions.
+        // Methods:
+        // A method is a function associated with an object or array. It performs an action or computation on the object.
+        // For arrays, examples include .push() (adds an element), .pop() (removes the last element), or .map() (transforms elements).
+        // Methods are called with parentheses (e.g., array.push(4)), often with arguments, and they execute a specific task.
+
